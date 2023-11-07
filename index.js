@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const firebase = require("firebase/app")
 
+const port = 4000
+// Our UNIQUE project configuration information for firebase
 const firebaseConfig = {
   apiKey: "AIzaSyDE_x2lYF_Jy8ZmSN7cugCDg9vZC2QrDLA",
   authDomain: "exercise-five-fall-2023-sofiaw.firebaseapp.com",
@@ -10,6 +12,8 @@ const firebaseConfig = {
   messagingSenderId: "633935205657",
   appId: "1:633935205657:web:bdf5966ba397c9a5eb6188"
 };
+// Initialize firebase
+firebase.initializeApp(firebaseConfig);
 
 const indexRoute = require('./routes/index')
 /* const singlePostRoute = require('./routes/singlePost')
