@@ -17,3 +17,5 @@ router.get('/:postId', (req, res) => {
         res.send(error);
     });
 });
+
+module.exports = router;
